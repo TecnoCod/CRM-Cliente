@@ -1,0 +1,14 @@
+{
+  "clientes": [
+    {
+      "nombre": "Pruebas",
+      "empresa": "pruebas",
+      "email": "corre@corre.com",
+      "identidad": 333,
+      "telefono": "444",
+      "direccion": "calle",
+      "notas": "",
+      "id": 2
+    }
+  ]
+}
