@@ -8,7 +8,7 @@ const Inicio = () => {
   useEffect(() => {
     const obtenerCliente = async () => {
       try {
-        const jsonApi = 'http://localhost:4000/clientes'
+        const jsonApi = import.meta.env.VITE_API_URL
         const resultado = await fetch(jsonApi)
         const respuesta = await resultado.json()
         
@@ -25,7 +25,7 @@ const Inicio = () => {
 
     if(confirmar){
       try {
-        const urlApi = `http://localhost:4000/clientes/${id}`
+        const urlApi = `${import.meta.env.VITE_API_URL}/${id}`
         const respuesta = await fetch(urlApi, {
           method: 'DELETE',
         })
@@ -49,10 +49,10 @@ const Inicio = () => {
       <table className="w-full mt-5 table-auto shadow">
         <thead className="bg-gray-800 text-white">
           <tr>
-            <th className="p-2">Nombre</th>
-            <th className="p-2">Empresa</th>
-            <th className="p-2">Telefono</th>
-            <th className="p-2">Acciones</th>
+            <th className="p-3">Nombre</th>
+            <th className="p-3">Empresa</th>
+            <th className="p-3">Telefono</th>
+            <th className="p-3">Acciones</th>
           </tr>
         </thead>
         <tbody>

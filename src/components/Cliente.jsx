@@ -13,27 +13,27 @@ const Cliente = ({cliente, hanledEliminar}) => {
 
   return (
     <tr className="border-b hover:bg-gray-50">
-      <td className="p-3">{nombre}</td>
-      <td className="p-3">{empresa}</td>
-      <td className="p-3">{telefono}</td>
-      <td className="p-3">
+      <td>{nombre}</td>
+      <td>{empresa}</td>
+      <td>{telefono}</td>
+      <td>
        <button
           type="button"
-          className="bg-green-700 p-2 rounded block hover:bg-green-600 w-full text-white font-bold uppercase mb-2"
+          className="bg-green-700 rounded block hover:bg-green-600 w-full text-white font-bold uppercase mb-2 mt-2"
           onClick={() => navigate(`/clientes/${id}`)}
         >
           Ver
         </button>        
         <button
           type="button"
-          className="bg-amber-700 p-2 rounded block hover:bg-amber-600 w-full text-white font-bold uppercase mb-2"
+          className="bg-amber-700 rounded block hover:bg-amber-600 w-full text-white font-bold uppercase mb-2"
           onClick={() => navigate(`/clientes/editar/${id}`)}
         >
           Editar
         </button>
         <button
           type="button"
-          className="bg-red-700 hover:bg-red-600 p-2 rounded block w-full text-white font-bold uppercase"
+          className="bg-red-700 hover:bg-red-600 rounded block w-full text-white font-bold uppercase mb-2"
           onClick={() =>hanledEliminar(id)}
         >
           Eliminar
